@@ -1,5 +1,5 @@
 # "Racial Disparity in Education, Poverty, and Single Parent Home Children" by Zara Clacken
-First, please read my code in the following notebooks to understand my data preparation process:
+#First, please read my code in the following notebooks to understand my data preparation process:
 
 Children in Single Parent Homes by Race
 
