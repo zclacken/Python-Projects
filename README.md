@@ -13,3 +13,5 @@ Data Sources:
 "Poverty by Race and Ethnicity," https://datausa.io/profile/geo/united-states#poverty_ethnicity
 	
 "Children in single-parent families by race in the United States," https://bit.ly/3wpS6UY
+
+"Race & Ethnicity by Degrees Awarded," https://datausa.io/profile/cip/education#ethnicity_degrees
