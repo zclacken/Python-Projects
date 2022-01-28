@@ -1,0 +1,30 @@
+def financialratioscalc(CA,CL,Inventory,EBIT,Interest_Expense,TA,TD,TE,
+                        Sales,Net_Income,Gross_Profit,
+                        Market_Price,Shares,Earnings_Per_Share):
+    Current_Ratio = CA/CL
+    Quick_Ratio = (CA-Inventory)/CL
+    Interest_Coverage_Ratio = EBIT/Interest_Expense    
+    Debt_Ratio = TD/TA
+    Debt_Equity_Ratio = TD/TE
+    Equity_Multiplier = TA/TE
+    Total_Asset_Turnover = Sales/TA
+    Profit_Margin = Net_Income/Sales
+    Gross_Profit_Margin = Gross_Profit/Sales
+    Operating_Profit_Margin = EBIT/Sales
+    Return_On_Assets = Net_Income/TA
+    Return_On_Equity = Net_Income/TE
+    PE_Ratio = Market_Price/Earnings_Per_Share
+    RatioNames = ("Current Ratio", "Quick Ratio", "Interest Coverage Ratio",
+                 "Debt Ratio","Debt-Equity Ratio","Equity Multiplier",
+                 "Total Asset Turnover", "Profit Margin", "Gross Profit Margin",
+                 "Operating Profit Margin","Return on Assets","Return on Equity","PE Ratio")
+    Ratios = [Current_Ratio,Quick_Ratio,Interest_Coverage_Ratio,
+              Debt_Ratio,Debt_Equity_Ratio,Equity_Multiplier,
+              Total_Asset_Turnover,Profit_Margin,Gross_Profit_Margin,
+              Operating_Profit_Margin,Return_On_Assets,Return_On_Equity,
+              PE_Ratio]
+    Ratios = np.round(Ratios,2)
+    Financial_Ratios = np.concatenate([RatioNames,Ratios]).reshape(13,2, order = "F")
+    Financial_Ratios = pd.DataFrame(Financial_Ratios)
+    Financial_Ratios.columns = ("Type","Ratio")
+    print(Financial_Ratios)
